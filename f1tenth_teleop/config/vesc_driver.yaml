@@ -1,0 +1,14 @@
+vesc_driver:
+  ros__parameters:
+    port: /dev/ttyACM0       # adjust if needed
+    baud: 115200
+    duty_cycle_min: -1.0
+    duty_cycle_max:  1.0
+    current_min: -60.0
+    current_max:  60.0
+    brake_min: 0.0
+    brake_max: 200.0
+    speed_min: -50000.0
+    speed_max:  50000.0
+    servo_min: 0.0
+    servo_max: 1.0

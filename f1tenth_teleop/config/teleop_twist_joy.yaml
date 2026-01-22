@@ -1,0 +1,21 @@
+teleop:
+  ros__parameters:
+    require_enable_button: true
+    enable_button: 9            # L1 
+    enable_turbo_button: -1
+
+    axis_linear:   { x: 1 }     # left stick up/down
+    scale_linear:  { x: 0.8 }   # flip with -0.8 if needed
+
+    axis_angular:  { yaw: 2 }   # right stick left/right
+    scale_angular: { yaw: -1.5 } # flip with -1.5 if needed
+
+twist_to_ack:
+  ros__parameters:
+    wheelbase: 0.33
+    max_steering_angle: 0.45
+    speed_limit: 1.0
+    twist_topic: /cmd_vel
+    ackermann_topic: /ackermann_cmd
+    frame_id: base_link
+    timeout: 0.5
