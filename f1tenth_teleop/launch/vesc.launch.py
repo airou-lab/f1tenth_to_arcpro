@@ -6,7 +6,7 @@ from launch_ros.actions import Node
 from ament_index_python.packages import get_package_share_directory
 
 def cfg(name):
-    share = get_package_share_directory('launches')
+    share = get_package_share_directory('f1tenth_teleop')
     return os.path.join(share, 'config', name)
 
 def generate_launch_description():
