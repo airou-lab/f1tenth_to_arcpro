@@ -16,6 +16,7 @@ twist_to_ack:
     max_steering_angle: 0.45
     speed_limit: 1.0
     twist_topic: /cmd_vel
+    twist_stamped_topic: /cmd_vel_stamped
     ackermann_topic: /ackermann_cmd
     frame_id: base_link
     timeout: 0.5
