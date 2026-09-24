@@ -1,22 +1,31 @@
 teleop:
   ros__parameters:
     require_enable_button: true
-    enable_button: 9            # L1 
+    enable_button: 4            # L1 / LB (button 4 in standard Linux js0)
     enable_turbo_button: -1
 
-    axis_linear:   { x: 1 }     # left stick up/down
-    scale_linear:  { x: 0.8 }   # flip with -0.8 if needed
+    axis_linear:
+      x: 1                      # Left Stick Up/Down (Axis 1)
+    scale_linear:
+      x: 0.8                    # Forward speed scale (m/s)
+    scale_linear_turbo:
+      x: 1.5
 
-    axis_angular:  { yaw: 2 }   # right stick left/right
-    scale_angular: { yaw: -1.5 } # flip with -1.5 if needed
+    axis_angular:
+      yaw: 3                    # Right Stick Left/Right (Axis 3 in Linux js0)
+    scale_angular:
+      yaw: -1.5                 # Steering scale (rad/s)
+    scale_angular_turbo:
+      yaw: -1.5
 
 twist_to_ack:
   ros__parameters:
     wheelbase: 0.33
     max_steering_angle: 0.45
-    speed_limit: 1.0
+    speed_limit: 1.5
     twist_topic: /cmd_vel
     twist_stamped_topic: /cmd_vel_stamped
     ackermann_topic: /ackermann_cmd
     frame_id: base_link
     timeout: 0.5
+
